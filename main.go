@@ -7,10 +7,13 @@ import (
 	"github.com/Eodomius/router"
 )
 
+const PORT = "8080"
 
 func main(){
+
 	var router = router.New()
 	http.Handle("/", router)
 	routes.Avatars(&router)
-	http.ListenAndServe(":8080", nil)
+
+	http.ListenAndServe(":"+PORT, nil)
 }
