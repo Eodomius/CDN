@@ -6,7 +6,7 @@ import (
 	"github.com/Eodomius/router"
 )
 
-func Test(w http.ResponseWriter, r *http.Request){
+func Test(w http.ResponseWriter, r *http.Request, _ *router.Result){
 	w.Write([]byte("Hello World"))
 }
 
