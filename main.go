@@ -13,7 +13,7 @@ func main(){
 
 	var router = router.New()
 	http.Handle("/", router)
-	routes.Avatars(&router)
+	routes.Avatars(router)
 
 	http.ListenAndServe(":"+PORT, nil)
 }
